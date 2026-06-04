@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white font-sans antialiased selection:bg-white selection:text-black">
       
-      {/* 1. ヘッダー（スマホ時はナビゲーションを横スライド可能に） */}
+      {/* 1. ヘッダー */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
           <div className="text-xl font-bold tracking-wider shrink-0">Room8</div>
@@ -66,18 +66,18 @@ export default function Home() {
                       <p className="text-neutral-400 text-xs md:text-sm leading-relaxed">AIを活用して回答率90%以上のプロダクトを実現。FAQページを取り込むだけで内容を解析し、カスタマーサポートの工数を劇的に削減しました。</p>
                     </div>
                     <div>
-                      {/* 正しいURLを設定 */}
                       <a href="https://smart-search.tech/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-white hover:text-neutral-300 transition group font-medium">
                         サービスはこちら <span className="transform group-hover:translate-x-1 transition-transform">➔</span>
                       </a>
                     </div>
                   </div>
-                  {/* PC・スマホ共通で確実に表示される画像配置 */}
-                  <div className="border border-white/10 rounded-2xl overflow-hidden shadow-2xl bg-neutral-900/40 w-full aspect-[16/9] relative block">
+                  
+                  {/* 【修正】親要素の高さ・幅を明示して、中の画像を確実に表示させる記述に変更 */}
+                  <div className="border border-white/10 rounded-2xl overflow-hidden shadow-2xl bg-neutral-900/40 w-full aspect-[16/9] relative">
                     <img 
                       src="/chatobot.jpg" 
-                      alt="月額3万・最短3日で始める生成AIチャットボット" 
-                      className="w-full h-full object-cover"
+                      alt="AIチャットボット" 
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                     />
                   </div>
                 </div>
@@ -98,18 +98,18 @@ export default function Home() {
                       <p className="text-neutral-400 text-xs md:text-sm leading-relaxed">推しの紹介する商品を一緒に体験して楽しめるマーケット。商品購入だけでなく、推しと一緒に食事できるイベントに参加できるなど、新しい体験価値を提供しています。</p>
                     </div>
                     <div>
-                      {/* 正しいURLを設定 */}
                       <a href="https://room8shop.base.shop/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-white hover:text-neutral-300 transition group font-medium">
                         サービスはこちら <span className="transform group-hover:translate-x-1 transition-transform">➔</span>
                       </a>
                     </div>
                   </div>
-                  {/* PC・スマホ共通で確実に表示される画像配置 */}
-                  <div className="border border-white/10 rounded-2xl overflow-hidden shadow-2xl bg-neutral-900/40 w-full aspect-[16/9] relative block md:col-start-1 md:row-start-1">
+                  
+                  {/* 【修正】親要素の高さ・幅を明示して、中の画像を確実に表示させる記述に変更 */}
+                  <div className="border border-white/10 rounded-2xl overflow-hidden shadow-2xl bg-neutral-900/40 w-full aspect-[16/9] relative md:col-start-1 md:row-start-1">
                     <img 
                       src="/gazou2.jpg" 
-                      alt="osimo かぞくみんなでよるチーノ" 
-                      className="w-full h-full object-cover"
+                      alt="OSIMO" 
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                     />
                   </div>
                 </div>
@@ -190,7 +190,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ABOUTセクション（ご指定の情報のみに100%修正、不要な事業内容は削除） */}
+        {/* ABOUTセクション */}
         <section id="about" className="py-16 md:py-24 border-t border-white/5 bg-neutral-950/20">
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12 items-start">
