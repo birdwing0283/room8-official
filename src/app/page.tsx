@@ -33,7 +33,7 @@ export default function Home() {
               </span>
             </h1>
             <p className="text-sm sm:text-lg text-neutral-400 max-w-xl leading-relaxed font-light">
-              Room8は、新規事業開発ノウハンによる事業開発支援と自社プロダクト開発の両面から新しい事業開発を推進します。
+              Room8は、新規事業開発ノウハウによる事業開発支援と自社プロダクト開発の両面から新しい事業開発を推進します。
             </p>
           </div>
           <div className="absolute right-0 bottom-10 text-[20vw] font-black text-white/[0.02] select-none leading-none pointer-events-none">
@@ -72,7 +72,6 @@ export default function Home() {
                     </div>
                   </div>
                   
-                  {/* 【修正】実際のファイル名「chatobot.png」に完全対応 */}
                   <div className="border border-white/10 rounded-2xl overflow-hidden shadow-2xl bg-neutral-900/40 w-full aspect-[16/9] relative block">
                     <img 
                       src="/chatobot.png" 
@@ -104,7 +103,6 @@ export default function Home() {
                     </div>
                   </div>
                   
-                  {/* 【修正】実際のファイル名「gazou2.jpeg」に完全対応 */}
                   <div className="border border-white/10 rounded-2xl overflow-hidden shadow-2xl bg-neutral-900/40 w-full aspect-[16/9] relative block md:col-start-1 md:row-start-1">
                     <img 
                       src="/gazou2.jpeg" 
@@ -131,12 +129,12 @@ export default function Home() {
                     </div>
                   </div>
                   
-                  {/* 【おまけ修正】fandom.png も public にあったので、ロゴから本物の画像（fandom.png）を表示するように最適化しました */}
+                  {/* 【修正】画像が大きくはみ出さないよう、他の写真と同じく縦横比16:9の枠に収め、全体が見えるようにcontain指定に調整 */}
                   <div className="border border-white/10 rounded-2xl overflow-hidden shadow-2xl bg-neutral-900/40 w-full aspect-[16/9] relative block">
                     <img 
                       src="/fandom.png" 
                       alt="Fandom" 
-                      className="absolute inset-0 w-full h-full object-cover"
+                      className="absolute inset-0 w-full h-full object-contain p-4 bg-neutral-950"
                     />
                   </div>
                 </div>
@@ -154,95 +152,4 @@ export default function Home() {
               <h2 className="text-3xl md:text-5xl font-bold tracking-tight uppercase">BOARD MEMBERS.</h2>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-              <div className="bg-neutral-900/30 border border-white/5 p-6 rounded-xl flex flex-col justify-between hover:border-white/20 transition-all">
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs font-mono tracking-widest text-blue-500 uppercase">CEO</span>
-                  </div>
-                  <h3 className="text-2xl font-bold tracking-tight">鳥丸 翼 <span className="text-xs font-normal text-neutral-500 block mt-1">TSUBASA TORIMARU</span></h3>
-                  <p className="text-neutral-400 text-sm leading-relaxed font-light whitespace-pre-wrap">
-                    佐賀大学在学中に動画配信事業を売却後、リクルートに入社。新規事業開発室にてプロダクトマネージャーとしてインテリア業界のSaaS事業立ち上げを担当。またTBSテレビと協業で縦型動画メディアサービスの立ち上げもプロダクトマネージャーとして担当。2022年1月より現職。
-                  </p>
-                </div>
-              </div>
-
-              <div className="bg-neutral-900/30 border border-white/5 p-6 rounded-xl flex flex-col justify-between hover:border-white/20 transition-all">
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs font-mono tracking-widest text-blue-500 uppercase">CTO</span>
-                  </div>
-                  <h3 className="text-2xl font-bold tracking-tight">呉 可天 <span className="text-xs font-normal text-neutral-500 block mt-1">GO KATEN</span></h3>
-                  <p className="text-neutral-400 text-sm leading-relaxed font-light whitespace-pre-wrap">
-                    京都大学大学院にてコンピュータサイエンス修士号を取得。リクルートにデータサイエンティストとして入社し、indeed等のビッグデータを活用した事業開発に従事。2022年1月現職。
-                  </p>
-                </div>
-              </div>
-
-              <div className="bg-neutral-900/30 border border-white/5 p-6 rounded-xl flex flex-col justify-between hover:border-white/20 transition-all">
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <span className="text-xs font-mono tracking-widest text-blue-500 uppercase">COO</span>
-                  </div>
-                  <h3 className="text-2xl font-bold tracking-tight">登坂 直弥 <span className="text-xs font-normal text-neutral-500 block mt-1">NAOYA TOSAKA</span></h3>
-                  <p className="text-neutral-400 text-sm leading-relaxed font-light whitespace-pre-wrap">
-                    早稲田大学法学部卒業後、リクルートに入社。メディアや検索エンジンのSales、領域・商品企画などの要職を経験。2022年1月より現職。
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ABOUTセクション */}
-        <section id="about" className="py-16 md:py-24 border-t border-white/5 bg-neutral-950/20">
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-12 items-start">
-              <div>
-                <span className="text-xs tracking-[0.3em] text-neutral-500 uppercase block mb-3">COMPANY PROFILE</span>
-                <h2 className="text-3xl md:text-5xl font-bold tracking-tight uppercase mb-6">ABOUT</h2>
-                <p className="text-neutral-400 text-sm md:text-base leading-relaxed font-light max-w-md">
-                  私たちは、可能性の境界線を押し広げるビジネスパートナーです。情熱とテクノロジーを融合させ、未来のスタンダードとなる事業を創り出します。
-                </p>
-              </div>
-              
-              <div className="border border-white/5 rounded-2xl overflow-hidden bg-neutral-900/20 divide-y divide-white/5">
-                <div className="grid grid-cols-[140px_1fr] p-5 text-sm">
-                  <span className="text-neutral-500 font-medium">会社名</span>
-                  <span className="font-light">Room8 Inc.</span>
-                </div>
-                <div className="grid grid-cols-[140px_1fr] p-5 text-sm">
-                  <span className="text-neutral-500 font-medium">設立</span>
-                  <span className="font-light">2022年</span>
-                </div>
-                <div className="grid grid-cols-[140px_1fr] p-5 text-sm">
-                  <span className="text-neutral-500 font-medium">代表者</span>
-                  <span className="font-light">代表取締役 鳥丸 翼</span>
-                </div>
-                <div className="grid grid-cols-[140px_1fr] p-5 text-sm">
-                  <span className="text-neutral-500 font-medium">資本金</span>
-                  <span className="font-light">45,000,000円</span>
-                </div>
-                <div className="grid grid-cols-[140px_1fr] p-5 text-sm">
-                  <span className="text-neutral-500 font-medium">従業員数</span>
-                  <span className="font-light">17名 (業務委託含む)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-
-      {/* フッター */}
-      <footer className="border-t border-white/5 py-8 bg-black">
-        <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-600">
-          <div>&copy; {new Date().getFullYear()} Room8 Inc. All rights reserved.</div>
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-neutral-400 transition">PRIVACY POLICY</a>
-            <a href="#" className="hover:text-neutral-400 transition">TERMS OF SERVICE</a>
-          </div>
-        </div>
-      </footer>
-    </div>
-  );
-}
+            <div className="grid md:grid-cols-3
