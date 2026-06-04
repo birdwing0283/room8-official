@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white font-sans antialiased selection:bg-white selection:text-black">
       
-      {/* 1. ヘッダー（スマホ時にナビゲーションを横スライド可能に） */}
+      {/* 1. ヘッダー（スマホ時はナビゲーションを横スライド可能に） */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
           <div className="text-xl font-bold tracking-wider shrink-0">Room8</div>
@@ -42,7 +42,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* サービスセクション（間隔を縮めて縦の空きを調整） */}
+        {/* サービスセクション（PC・スマホで完全に同一データを使用） */}
         <section id="service" className="py-16 md:py-24 border-t border-white/5 bg-neutral-950/30">
           <div className="max-w-7xl mx-auto px-4">
             <div className="mb-12 md:mb-16">
@@ -50,17 +50,15 @@ export default function Home() {
               <h2 className="text-3xl md:text-5xl font-bold tracking-tight uppercase">SERVICE</h2>
             </div>
 
-            {/* space-y-12 に縮めて、各事業の間の余白をタイトに調整 */}
+            {/* 各事業ごとの余白をキュッと調整 */}
             <div className="space-y-12 md:space-y-16">
               
               {/* 01: 新規事業開発支援 */}
               <div className="relative border-b border-white/5 pb-12 md:pb-16">
-                {/* 01の色を暗い色から白（text-white/80）に変更 */}
                 <div className="text-[6rem] md:text-[8rem] font-black text-white/80 opacity-40 font-mono leading-none absolute -top-8 -left-2 select-none z-0">01</div>
                 <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center pt-8">
                   <div className="space-y-6">
                     <h3 className="text-2xl md:text-4xl font-bold tracking-tight">新規事業開発支援</h3>
-                    {/* 文字化けを完全に修正 */}
                     <p className="text-neutral-400 text-sm md:text-base leading-relaxed font-light">
                       様々な事業のシード〜アーリーフェーズの事業開発をプロダクト開発、セールス体制の構築、カスタマーサクセス組織の立ち上げなど様々な領域から多角的に支援し、パートナー企業様の事業拡大を最大化します。
                     </p>
@@ -69,33 +67,29 @@ export default function Home() {
                       <h4 className="text-lg font-bold">AIチャットBOTの新規プロダクト開発支援</h4>
                       <p className="text-neutral-400 text-xs md:text-sm leading-relaxed">AIを活用して回答率90%以上のプロダクトを実現。FAQページを取り込むだけで内容を解析し、カスタマーサポートの工数を劇的に削減しました。</p>
                     </div>
-                    <a href="#" className="inline-flex items-center gap-2 text-sm text-white hover:text-neutral-300 transition group font-medium">
-                      サービスはこちら <span className="transform group-hover:translate-x-1 transition-transform">➔</span>
-                    </a>
+                    <div>
+                      <a href="#" className="inline-flex items-center gap-2 text-sm text-white hover:text-neutral-300 transition group font-medium">
+                        サービスはこちら <span className="transform group-hover:translate-x-1 transition-transform">➔</span>
+                      </a>
+                    </div>
                   </div>
-                  {/* 実績画像ブロック */}
-                  <div className="border border-white/10 rounded-2xl overflow-hidden shadow-2xl bg-neutral-900/40 aspect-video flex items-center justify-center relative">
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-transparent z-10 pointer-events-none" />
-                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="AI Chatbot Support" className="w-full h-full object-cover opacity-90" />
-                    <div className="absolute bottom-4 left-4 z-20 bg-blue-600/90 text-white text-xs px-3 py-1.5 rounded-md font-medium backdrop-blur-sm">月額3万・最短3日で始める生成AIチャットボット</div>
+                  {/* 正しい本物の画像ファイルをPC・スマホ共通で配置 */}
+                  <div className="border border-white/10 rounded-2xl overflow-hidden shadow-2xl bg-neutral-900/40 w-full aspect-[16/9] relative">
+                    <img 
+                      src="/chatobot_3.jpg" 
+                      alt="月額3万・最短3日で始める生成AIチャットボット" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
               </div>
 
               {/* 02: インフルエンサーマーケティング事業 */}
               <div className="relative border-b border-white/5 pb-12 md:pb-16">
-                {/* 02の色を白（text-white/80）に変更 */}
                 <div className="text-[6rem] md:text-[8rem] font-black text-white/80 opacity-40 font-mono leading-none absolute -top-8 -left-2 select-none z-0">02</div>
                 <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center pt-8">
-                  {/* OSIMO画像ブロック */}
-                  <div className="border border-white/10 rounded-2xl overflow-hidden shadow-2xl bg-neutral-900/40 aspect-video flex items-center justify-center relative order-last md:order-first">
-                    <img src="https://images.unsplash.com/photo-1616469829581-73993eb86b02?auto=format&fit=crop&w=800&q=80" alt="OSIMO" className="w-full h-full object-cover opacity-80" />
-                    <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-6">
-                      <span className="text-xl font-bold tracking-wider font-mono text-purple-400">osimo</span>
-                      <p className="text-white/60 text-xs mt-1">【かぞくみんなでよるチーノ】夜でもごくごく飲めちゃう！本格派カフェオレが登場！【PR / 食レポ / Vtuber】</p>
-                    </div>
-                  </div>
-                  <div className="space-y-6">
+                  {/* PCでは左・スマホでは下に綺麗に並ぶよう、order属性を適切に制御しつつ情報を共通化 */}
+                  <div className="space-y-6 md:col-start-2 md:row-start-1">
                     <h3 className="text-2xl md:text-4xl font-bold tracking-tight">インフルエンサーマーケティング事業</h3>
                     <p className="text-neutral-400 text-sm md:text-base leading-relaxed font-light">
                       1,000名以上のインフルエンサーと提携し、全国各地の魅力ある食品をPRするマーケティング事業を運営。単なる広告に留まらない、ファンとの深いエンゲージメントを創出します。
@@ -105,16 +99,25 @@ export default function Home() {
                       <h4 className="text-lg font-bold">体験型マーケット「OSIMO」</h4>
                       <p className="text-neutral-400 text-xs md:text-sm leading-relaxed">推しの紹介する商品を一緒に体験して楽しめるマーケット。商品購入だけでなく、推しと一緒に食事できるイベントに参加できるなど、新しい体験価値を提供しています。</p>
                     </div>
-                    <a href="#" className="inline-flex items-center gap-2 text-sm text-white hover:text-neutral-300 transition group font-medium">
-                      サービスはこちら <span className="transform group-hover:translate-x-1 transition-transform">➔</span>
-                    </a>
+                    <div>
+                      <a href="#" className="inline-flex items-center gap-2 text-sm text-white hover:text-neutral-300 transition group font-medium">
+                        サービスはこちら <span className="transform group-hover:translate-x-1 transition-transform">➔</span>
+                      </a>
+                    </div>
+                  </div>
+                  {/* 正しい本物のOSIMO画像ファイルをPC・スマホ共通で配置 */}
+                  <div className="border border-white/10 rounded-2xl overflow-hidden shadow-2xl bg-neutral-900/40 w-full aspect-[16/9] relative md:col-start-1 md:row-start-1">
+                    <img 
+                      src="/gazou2_3.jpg" 
+                      alt="osimo かぞくみんなでよるチーノ" 
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
               </div>
 
               {/* 03: マッチングプラットフォーム事業 */}
               <div className="relative pb-4">
-                {/* 03の色を白（text-white/80）に変更 */}
                 <div className="text-[6rem] md:text-[8rem] font-black text-white/80 opacity-40 font-mono leading-none absolute -top-8 -left-2 select-none z-0">03</div>
                 <div className="relative z-10 grid md:grid-cols-2 gap-8 items-center pt-8">
                   <div className="space-y-6">
@@ -141,7 +144,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* メンバーセクション（鳥丸さんの新プロフィール文を完全表示） */}
+        {/* メンバーセクション */}
         <section id="member" className="py-16 md:py-24 border-t border-white/5">
           <div className="max-w-7xl mx-auto px-4">
             <div className="mb-12 md:mb-16">
@@ -151,7 +154,7 @@ export default function Home() {
 
             <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
               
-              {/* 鳥丸さん（ご指定の文章を1文字も漏らさず、切り捨てなしで完全表示） */}
+              {/* 鳥丸さん */}
               <div className="bg-neutral-900/30 border border-white/5 p-6 rounded-xl flex flex-col justify-between hover:border-white/20 transition-all">
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
@@ -194,7 +197,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ABOUTセクション */}
+        {/* ABOUTセクション（ご指定の情報に完全更新） */}
         <section id="about" className="py-16 md:py-24 border-t border-white/5 bg-neutral-950/20">
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -205,11 +208,33 @@ export default function Home() {
                   私たちは、可能性の境界線を押し広げるビジネスパートナーです。情熱とテクノロジーを融合させ、未来のスタンダードとなる事業を創り出します。
                 </p>
               </div>
+              
+              {/* 会社概要テーブル：情報を完全修正・追加 */}
               <div className="border border-white/5 rounded-2xl overflow-hidden bg-neutral-900/20 divide-y divide-white/5">
-                <div className="grid grid-cols-[100px_1fr] p-5 text-sm"><span className="text-neutral-500 font-medium">会社名</span><span className="font-light">Room8 Inc.</span></div>
-                <div className="grid grid-cols-[100px_1fr] p-5 text-sm"><span className="text-neutral-500 font-medium">設立</span><span className="font-light">2026年</span></div>
-                <div className="grid grid-cols-[100px_1fr] p-5 text-sm"><span className="text-neutral-500 font-medium">代表者</span><span className="font-light">鳥丸 翼</span></div>
-                <div className="grid grid-cols-[100px_1fr] p-5 text-sm"><span className="text-neutral-500 font-medium">事業内容</span><span className="font-light">新規事業開発支援、マーケティング、プラットフォーム運営</span></div>
+                <div className="grid grid-cols-[120px_1fr] p-5 text-sm">
+                  <span className="text-neutral-500 font-medium">会社名</span>
+                  <span className="font-light">Room8 Inc.</span>
+                </div>
+                <div className="grid grid-cols-[120px_1fr] p-5 text-sm">
+                  <span className="text-neutral-500 font-medium">設立</span>
+                  <span className="font-light">2022年</span>
+                </div>
+                <div className="grid grid-cols-[120px_1fr] p-5 text-sm">
+                  <span className="text-neutral-500 font-medium">代表者</span>
+                  <span className="font-light">代表取締役 鳥丸 翼</span>
+                </div>
+                <div className="grid grid-cols-[120px_1fr] p-5 text-sm">
+                  <span className="text-neutral-500 font-medium">資本金</span>
+                  <span className="font-light">45,000,000円</span>
+                </div>
+                <div className="grid grid-cols-[120px_1fr] p-5 text-sm">
+                  <span className="text-neutral-500 font-medium">従業員数</span>
+                  <span className="font-light">17名 (業務委託含む)</span>
+                </div>
+                <div className="grid grid-cols-[120px_1fr] p-5 text-sm">
+                  <span className="text-neutral-500 font-medium">事業内容</span>
+                  <span className="font-light">新規事業開発支援、マーケティング、プラットフォーム運営</span>
+                </div>
               </div>
             </div>
           </div>
