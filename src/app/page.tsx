@@ -33,7 +33,7 @@ export default function Home() {
               </span>
             </h1>
             <p className="text-sm sm:text-lg text-neutral-400 max-w-xl leading-relaxed font-light">
-              Room8は、新規事業開発ノウハウによる事業開発支援と自社プロダクト開発の両面から新しい事業開発を推進します。
+              Room8は、新規事業開発ノウハンによる事業開発支援と自社プロダクト開発の両面から新しい事業開発を推進します。
             </p>
           </div>
           <div className="absolute right-0 bottom-10 text-[20vw] font-black text-white/[0.02] select-none leading-none pointer-events-none">
@@ -72,12 +72,12 @@ export default function Home() {
                     </div>
                   </div>
                   
-                  {/* 【修正】親要素の高さ・幅を明示して、中の画像を確実に表示させる記述に変更 */}
-                  <div className="border border-white/10 rounded-2xl overflow-hidden shadow-2xl bg-neutral-900/40 w-full aspect-[16/9] relative">
+                  {/* 【修正】実際のファイル名「chatobot.png」に完全対応 */}
+                  <div className="border border-white/10 rounded-2xl overflow-hidden shadow-2xl bg-neutral-900/40 w-full aspect-[16/9] relative block">
                     <img 
-                      src="/chatobot.jpg" 
+                      src="/chatobot.png" 
                       alt="AIチャットボット" 
-                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                      className="absolute inset-0 w-full h-full object-cover"
                     />
                   </div>
                 </div>
@@ -104,12 +104,12 @@ export default function Home() {
                     </div>
                   </div>
                   
-                  {/* 【修正】親要素の高さ・幅を明示して、中の画像を確実に表示させる記述に変更 */}
-                  <div className="border border-white/10 rounded-2xl overflow-hidden shadow-2xl bg-neutral-900/40 w-full aspect-[16/9] relative md:col-start-1 md:row-start-1">
+                  {/* 【修正】実際のファイル名「gazou2.jpeg」に完全対応 */}
+                  <div className="border border-white/10 rounded-2xl overflow-hidden shadow-2xl bg-neutral-900/40 w-full aspect-[16/9] relative block md:col-start-1 md:row-start-1">
                     <img 
-                      src="/gazou2.jpg" 
+                      src="/gazou2.jpeg" 
                       alt="OSIMO" 
-                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                      className="absolute inset-0 w-full h-full object-cover"
                     />
                   </div>
                 </div>
@@ -130,10 +130,14 @@ export default function Home() {
                       <p className="text-neutral-400 text-xs md:text-sm leading-relaxed">サービスリリースから累計10万回以上のイベントが開催され、オンラインのランチ会、ゲームなど様々な企画が毎日実施。クリエイターがファンと直接繋がる場を提供しています。</p>
                     </div>
                   </div>
-                  <div className="border border-white/10 rounded-2xl overflow-hidden shadow-2xl bg-neutral-900/80 aspect-video flex flex-col items-center justify-center p-6 relative">
-                    <div className="flex items-center gap-3 text-green-500 font-black text-4xl md:text-5xl tracking-tight">
-                      <span className="text-3xl">📢</span> Fandom
-                    </div>
+                  
+                  {/* 【おまけ修正】fandom.png も public にあったので、ロゴから本物の画像（fandom.png）を表示するように最適化しました */}
+                  <div className="border border-white/10 rounded-2xl overflow-hidden shadow-2xl bg-neutral-900/40 w-full aspect-[16/9] relative block">
+                    <img 
+                      src="/fandom.png" 
+                      alt="Fandom" 
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
                   </div>
                 </div>
               </div>
