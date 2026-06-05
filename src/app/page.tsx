@@ -12,6 +12,7 @@ export default function Home() {
           <nav className="flex items-center gap-6 overflow-x-auto scrollbar-none py-2 -my-2 max-w-[65%] md:max-w-none">
             <a href="#service" className="text-sm text-neutral-400 hover:text-white transition shrink-0">SERVICE</a>
             <a href="#member" className="text-sm text-neutral-400 hover:text-white transition shrink-0">MEMBER</a>
+            <a href="#stakeholders" className="text-sm text-neutral-400 hover:text-white transition shrink-0">STAKEHOLDERS</a>
             <a href="#about" className="text-sm text-neutral-400 hover:text-white transition shrink-0">ABOUT</a>
           </nav>
         </div>
@@ -41,7 +42,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* サービスセクション（PC・スマホ共通） */}
+        {/* サービスセクション */}
         <section id="service" className="py-16 md:py-24 border-t border-white/5 bg-neutral-950/30">
           <div className="max-w-7xl mx-auto px-4">
             <div className="mb-12 md:mb-16">
@@ -63,7 +64,7 @@ export default function Home() {
                     <div className="bg-neutral-900/60 border border-white/5 p-6 rounded-xl space-y-2">
                       <span className="text-xs font-mono tracking-widest text-blue-400 uppercase block">CASE STUDY</span>
                       <h4 className="text-lg font-bold">AIチャットBOTの新規プロダクト開発支援</h4>
-                      <p className="text-neutral-400 text-xs md:text-sm leading-relaxed">AIを活用して回答率90%以上のプロダクトを実現。FAQページを取り込むだけで内容を解析し、カスタマーサポートの工数を劇的に削減しました。</p>
+                      <p className="text-neutral-400 text-xs md:text-sm leading-relaxed">AIを活用して回答率 90%以上のプロダクトを実現。FAQページを取り込むだけで内容を解析し、カスタマーサポートの工数を劇的に削減しました。</p>
                     </div>
                     <div>
                       <a href="https://smart-search.tech/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm text-white hover:text-neutral-300 transition group font-medium">
@@ -129,7 +130,6 @@ export default function Home() {
                     </div>
                   </div>
                   
-                  {/* 【修正】p-12 で余白を大きく取り、ロゴ全体が絶対に隠れず小さく綺麗に収まるようにしました */}
                   <div className="border border-white/10 rounded-2xl overflow-hidden shadow-2xl bg-neutral-900/40 w-full aspect-[16/9] relative block">
                     <img 
                       src="/fandom.png" 
@@ -188,6 +188,59 @@ export default function Home() {
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 【新規追加】ステークホルダーセクション */}
+        <section id="stakeholders" className="py-16 md:py-24 border-t border-white/5 bg-neutral-950/10">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="mb-12 md:mb-16">
+              <span className="text-xs tracking-[0.3em] text-neutral-500 uppercase block mb-3">OUR PARTNERS</span>
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight uppercase">STAKEHOLDERS</h2>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+              <a 
+                href="https://east.vc/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="flex items-center justify-center p-8 bg-neutral-900/40 border border-white/5 rounded-xl hover:border-white/20 hover:bg-neutral-900/80 transition-all group min-h-[100px]"
+              >
+                <span className="text-lg md:text-xl font-bold tracking-tight text-neutral-400 group-hover:text-white transition-colors">
+                  East Ventures
+                </span>
+              </a>
+
+              <div 
+                className="flex items-center justify-center p-8 bg-neutral-900/40 border border-white/5 rounded-xl hover:border-white/20 hover:bg-neutral-900/80 transition-all group min-h-[100px]"
+              >
+                <span className="text-lg md:text-xl font-black tracking-widest text-neutral-400 group-hover:text-white transition-colors uppercase">
+                  ANOBAKA
+                </span>
+              </div>
+
+              <a 
+                href="https://drgfund.com/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="flex items-center justify-center p-8 bg-neutral-900/40 border border-white/5 rounded-xl hover:border-white/20 hover:bg-neutral-900/80 transition-all group min-h-[100px]"
+              >
+                <span className="text-lg md:text-xl font-mono tracking-tight font-bold text-neutral-400 group-hover:text-white transition-colors">
+                  DRG Fund
+                </span>
+              </a>
+
+              <a 
+                href="https://www.skyland.vc/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="flex items-center justify-center p-8 bg-neutral-900/40 border border-white/5 rounded-xl hover:border-white/20 hover:bg-neutral-900/80 transition-all group min-h-[100px]"
+              >
+                <span className="text-sm md:text-base font-sans font-bold tracking-tighter text-neutral-400 group-hover:text-white transition-colors">
+                  Skyland Ventures
+                </span>
+              </a>
             </div>
           </div>
         </section>
